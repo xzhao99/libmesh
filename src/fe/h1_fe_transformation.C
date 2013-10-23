@@ -217,7 +217,6 @@ namespace libMesh
 #ifdef LIBMESH_ENABLE_SECOND_DERIVATIVES
   template< typename OutputShape >
   void H1FETransformation<OutputShape>::map_d2phi( const unsigned int dim,
-						   const Elem* const elem,
 						   const std::vector<Point>&,
 						   const FEGenericBase<OutputShape>& fe,
 						   std::vector<std::vector<typename FEGenericBase<OutputShape>::OutputTensor> >& d2phi,
