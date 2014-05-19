@@ -291,8 +291,8 @@ am__libmesh_dbg_la_SOURCES_DIST = src/base/dof_map.C \
 	src/mesh/mesh_data_unv_support.C \
 	src/mesh/mesh_data_xdr_support.C src/mesh/mesh_function.C \
 	src/mesh/mesh_generation.C src/mesh/mesh_modification.C \
-	src/mesh/mesh_output.C src/mesh/mesh_refinement.C \
-	src/mesh/mesh_refinement_flagging.C \
+	src/mesh/mesh_output.C src/mesh/mesh_qhull_interface.C \
+	src/mesh/mesh_refinement.C src/mesh/mesh_refinement_flagging.C \
 	src/mesh/mesh_refinement_smoothing.C \
 	src/mesh/mesh_serializer.C src/mesh/mesh_smoother.C \
 	src/mesh/mesh_smoother_laplace.C \
@@ -649,6 +649,7 @@ am__objects_1 = src/base/libmesh_dbg_la-dof_map.lo \
 	src/mesh/libmesh_dbg_la-mesh_generation.lo \
 	src/mesh/libmesh_dbg_la-mesh_modification.lo \
 	src/mesh/libmesh_dbg_la-mesh_output.lo \
+	src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo \
 	src/mesh/libmesh_dbg_la-mesh_refinement.lo \
 	src/mesh/libmesh_dbg_la-mesh_refinement_flagging.lo \
 	src/mesh/libmesh_dbg_la-mesh_refinement_smoothing.lo \
@@ -985,8 +986,8 @@ am__libmesh_devel_la_SOURCES_DIST = src/base/dof_map.C \
 	src/mesh/mesh_data_unv_support.C \
 	src/mesh/mesh_data_xdr_support.C src/mesh/mesh_function.C \
 	src/mesh/mesh_generation.C src/mesh/mesh_modification.C \
-	src/mesh/mesh_output.C src/mesh/mesh_refinement.C \
-	src/mesh/mesh_refinement_flagging.C \
+	src/mesh/mesh_output.C src/mesh/mesh_qhull_interface.C \
+	src/mesh/mesh_refinement.C src/mesh/mesh_refinement_flagging.C \
 	src/mesh/mesh_refinement_smoothing.C \
 	src/mesh/mesh_serializer.C src/mesh/mesh_smoother.C \
 	src/mesh/mesh_smoother_laplace.C \
@@ -1342,6 +1343,7 @@ am__objects_2 = src/base/libmesh_devel_la-dof_map.lo \
 	src/mesh/libmesh_devel_la-mesh_generation.lo \
 	src/mesh/libmesh_devel_la-mesh_modification.lo \
 	src/mesh/libmesh_devel_la-mesh_output.lo \
+	src/mesh/libmesh_devel_la-mesh_qhull_interface.lo \
 	src/mesh/libmesh_devel_la-mesh_refinement.lo \
 	src/mesh/libmesh_devel_la-mesh_refinement_flagging.lo \
 	src/mesh/libmesh_devel_la-mesh_refinement_smoothing.lo \
@@ -1675,8 +1677,8 @@ am__libmesh_oprof_la_SOURCES_DIST = src/base/dof_map.C \
 	src/mesh/mesh_data_unv_support.C \
 	src/mesh/mesh_data_xdr_support.C src/mesh/mesh_function.C \
 	src/mesh/mesh_generation.C src/mesh/mesh_modification.C \
-	src/mesh/mesh_output.C src/mesh/mesh_refinement.C \
-	src/mesh/mesh_refinement_flagging.C \
+	src/mesh/mesh_output.C src/mesh/mesh_qhull_interface.C \
+	src/mesh/mesh_refinement.C src/mesh/mesh_refinement_flagging.C \
 	src/mesh/mesh_refinement_smoothing.C \
 	src/mesh/mesh_serializer.C src/mesh/mesh_smoother.C \
 	src/mesh/mesh_smoother_laplace.C \
@@ -2032,6 +2034,7 @@ am__objects_3 = src/base/libmesh_oprof_la-dof_map.lo \
 	src/mesh/libmesh_oprof_la-mesh_generation.lo \
 	src/mesh/libmesh_oprof_la-mesh_modification.lo \
 	src/mesh/libmesh_oprof_la-mesh_output.lo \
+	src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo \
 	src/mesh/libmesh_oprof_la-mesh_refinement.lo \
 	src/mesh/libmesh_oprof_la-mesh_refinement_flagging.lo \
 	src/mesh/libmesh_oprof_la-mesh_refinement_smoothing.lo \
@@ -2365,8 +2368,8 @@ am__libmesh_opt_la_SOURCES_DIST = src/base/dof_map.C \
 	src/mesh/mesh_data_unv_support.C \
 	src/mesh/mesh_data_xdr_support.C src/mesh/mesh_function.C \
 	src/mesh/mesh_generation.C src/mesh/mesh_modification.C \
-	src/mesh/mesh_output.C src/mesh/mesh_refinement.C \
-	src/mesh/mesh_refinement_flagging.C \
+	src/mesh/mesh_output.C src/mesh/mesh_qhull_interface.C \
+	src/mesh/mesh_refinement.C src/mesh/mesh_refinement_flagging.C \
 	src/mesh/mesh_refinement_smoothing.C \
 	src/mesh/mesh_serializer.C src/mesh/mesh_smoother.C \
 	src/mesh/mesh_smoother_laplace.C \
@@ -2722,6 +2725,7 @@ am__objects_4 = src/base/libmesh_opt_la-dof_map.lo \
 	src/mesh/libmesh_opt_la-mesh_generation.lo \
 	src/mesh/libmesh_opt_la-mesh_modification.lo \
 	src/mesh/libmesh_opt_la-mesh_output.lo \
+	src/mesh/libmesh_opt_la-mesh_qhull_interface.lo \
 	src/mesh/libmesh_opt_la-mesh_refinement.lo \
 	src/mesh/libmesh_opt_la-mesh_refinement_flagging.lo \
 	src/mesh/libmesh_opt_la-mesh_refinement_smoothing.lo \
@@ -3054,8 +3058,8 @@ am__libmesh_prof_la_SOURCES_DIST = src/base/dof_map.C \
 	src/mesh/mesh_data_unv_support.C \
 	src/mesh/mesh_data_xdr_support.C src/mesh/mesh_function.C \
 	src/mesh/mesh_generation.C src/mesh/mesh_modification.C \
-	src/mesh/mesh_output.C src/mesh/mesh_refinement.C \
-	src/mesh/mesh_refinement_flagging.C \
+	src/mesh/mesh_output.C src/mesh/mesh_qhull_interface.C \
+	src/mesh/mesh_refinement.C src/mesh/mesh_refinement_flagging.C \
 	src/mesh/mesh_refinement_smoothing.C \
 	src/mesh/mesh_serializer.C src/mesh/mesh_smoother.C \
 	src/mesh/mesh_smoother_laplace.C \
@@ -3411,6 +3415,7 @@ am__objects_5 = src/base/libmesh_prof_la-dof_map.lo \
 	src/mesh/libmesh_prof_la-mesh_generation.lo \
 	src/mesh/libmesh_prof_la-mesh_modification.lo \
 	src/mesh/libmesh_prof_la-mesh_output.lo \
+	src/mesh/libmesh_prof_la-mesh_qhull_interface.lo \
 	src/mesh/libmesh_prof_la-mesh_refinement.lo \
 	src/mesh/libmesh_prof_la-mesh_refinement_flagging.lo \
 	src/mesh/libmesh_prof_la-mesh_refinement_smoothing.lo \
@@ -4633,6 +4638,7 @@ libmesh_SOURCES = \
         src/mesh/mesh_generation.C \
         src/mesh/mesh_modification.C \
         src/mesh/mesh_output.C \
+        src/mesh/mesh_qhull_interface.C \
         src/mesh/mesh_refinement.C \
         src/mesh/mesh_refinement_flagging.C \
         src/mesh/mesh_refinement_smoothing.C \
@@ -5589,6 +5595,8 @@ src/mesh/libmesh_dbg_la-mesh_modification.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_dbg_la-mesh_output.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
+src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo:  \
+	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_dbg_la-mesh_refinement.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_dbg_la-mesh_refinement_flagging.lo:  \
@@ -6638,6 +6646,8 @@ src/mesh/libmesh_devel_la-mesh_modification.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_devel_la-mesh_output.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
+src/mesh/libmesh_devel_la-mesh_qhull_interface.lo:  \
+	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_devel_la-mesh_refinement.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_devel_la-mesh_refinement_flagging.lo:  \
@@ -7630,6 +7640,8 @@ src/mesh/libmesh_oprof_la-mesh_modification.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_oprof_la-mesh_output.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
+src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo:  \
+	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_oprof_la-mesh_refinement.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_oprof_la-mesh_refinement_flagging.lo:  \
@@ -8622,6 +8634,8 @@ src/mesh/libmesh_opt_la-mesh_modification.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_opt_la-mesh_output.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
+src/mesh/libmesh_opt_la-mesh_qhull_interface.lo:  \
+	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_opt_la-mesh_refinement.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_opt_la-mesh_refinement_flagging.lo:  \
@@ -9611,6 +9625,8 @@ src/mesh/libmesh_prof_la-mesh_modification.lo:  \
 	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_prof_la-mesh_output.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
+src/mesh/libmesh_prof_la-mesh_qhull_interface.lo:  \
+	src/mesh/$(am__dirstamp) src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_prof_la-mesh_refinement.lo: src/mesh/$(am__dirstamp) \
 	src/mesh/$(DEPDIR)/$(am__dirstamp)
 src/mesh/libmesh_prof_la-mesh_refinement_flagging.lo:  \
@@ -11450,6 +11466,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_generation.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_modification.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_output.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_qhull_interface.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_refinement.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_refinement_flagging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_refinement_smoothing.Plo@am__quote@
@@ -11511,6 +11528,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_generation.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_modification.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_output.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_qhull_interface.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement_flagging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement_smoothing.Plo@am__quote@
@@ -11572,6 +11590,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_generation.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_modification.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_output.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_qhull_interface.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_refinement.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_refinement_flagging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_refinement_smoothing.Plo@am__quote@
@@ -11633,6 +11652,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_generation.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_modification.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_output.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_qhull_interface.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement_flagging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement_smoothing.Plo@am__quote@
@@ -11694,6 +11714,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_generation.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_modification.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_output.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_qhull_interface.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_refinement.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_refinement_flagging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_refinement_smoothing.Plo@am__quote@
@@ -14001,6 +14022,13 @@ src/mesh/libmesh_dbg_la-mesh_output.lo: src/mesh/mesh_output.C
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_output.C' object='src/mesh/libmesh_dbg_la-mesh_output.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_dbg_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_dbg_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_dbg_la-mesh_output.lo `test -f 'src/mesh/mesh_output.C' || echo '$(srcdir)/'`src/mesh/mesh_output.C
+
+src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo: src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_dbg_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_dbg_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_qhull_interface.Tpo -c -o src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_qhull_interface.Tpo src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_qhull_interface.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_qhull_interface.C' object='src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_dbg_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_dbg_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_dbg_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
 
 src/mesh/libmesh_dbg_la-mesh_refinement.lo: src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_dbg_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_dbg_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_dbg_la-mesh_refinement.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_dbg_la-mesh_refinement.Tpo -c -o src/mesh/libmesh_dbg_la-mesh_refinement.lo `test -f 'src/mesh/mesh_refinement.C' || echo '$(srcdir)/'`src/mesh/mesh_refinement.C
@@ -16851,6 +16879,13 @@ src/mesh/libmesh_devel_la-mesh_output.lo: src/mesh/mesh_output.C
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_devel_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_devel_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_devel_la-mesh_output.lo `test -f 'src/mesh/mesh_output.C' || echo '$(srcdir)/'`src/mesh/mesh_output.C
 
+src/mesh/libmesh_devel_la-mesh_qhull_interface.lo: src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_devel_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_devel_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_devel_la-mesh_qhull_interface.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_qhull_interface.Tpo -c -o src/mesh/libmesh_devel_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_qhull_interface.Tpo src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_qhull_interface.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_qhull_interface.C' object='src/mesh/libmesh_devel_la-mesh_qhull_interface.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_devel_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_devel_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_devel_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+
 src/mesh/libmesh_devel_la-mesh_refinement.lo: src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_devel_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_devel_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_devel_la-mesh_refinement.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement.Tpo -c -o src/mesh/libmesh_devel_la-mesh_refinement.lo `test -f 'src/mesh/mesh_refinement.C' || echo '$(srcdir)/'`src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement.Tpo src/mesh/$(DEPDIR)/libmesh_devel_la-mesh_refinement.Plo
@@ -19699,6 +19734,13 @@ src/mesh/libmesh_oprof_la-mesh_output.lo: src/mesh/mesh_output.C
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_output.C' object='src/mesh/libmesh_oprof_la-mesh_output.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_oprof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_oprof_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_oprof_la-mesh_output.lo `test -f 'src/mesh/mesh_output.C' || echo '$(srcdir)/'`src/mesh/mesh_output.C
+
+src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo: src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_oprof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_oprof_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_qhull_interface.Tpo -c -o src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_qhull_interface.Tpo src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_qhull_interface.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_qhull_interface.C' object='src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_oprof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_oprof_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_oprof_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
 
 src/mesh/libmesh_oprof_la-mesh_refinement.lo: src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_oprof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_oprof_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_oprof_la-mesh_refinement.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_oprof_la-mesh_refinement.Tpo -c -o src/mesh/libmesh_oprof_la-mesh_refinement.lo `test -f 'src/mesh/mesh_refinement.C' || echo '$(srcdir)/'`src/mesh/mesh_refinement.C
@@ -22549,6 +22591,13 @@ src/mesh/libmesh_opt_la-mesh_output.lo: src/mesh/mesh_output.C
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_opt_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_opt_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_opt_la-mesh_output.lo `test -f 'src/mesh/mesh_output.C' || echo '$(srcdir)/'`src/mesh/mesh_output.C
 
+src/mesh/libmesh_opt_la-mesh_qhull_interface.lo: src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_opt_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_opt_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_opt_la-mesh_qhull_interface.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_qhull_interface.Tpo -c -o src/mesh/libmesh_opt_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_qhull_interface.Tpo src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_qhull_interface.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_qhull_interface.C' object='src/mesh/libmesh_opt_la-mesh_qhull_interface.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_opt_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_opt_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_opt_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+
 src/mesh/libmesh_opt_la-mesh_refinement.lo: src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_opt_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_opt_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_opt_la-mesh_refinement.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement.Tpo -c -o src/mesh/libmesh_opt_la-mesh_refinement.lo `test -f 'src/mesh/mesh_refinement.C' || echo '$(srcdir)/'`src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement.Tpo src/mesh/$(DEPDIR)/libmesh_opt_la-mesh_refinement.Plo
@@ -25397,6 +25446,13 @@ src/mesh/libmesh_prof_la-mesh_output.lo: src/mesh/mesh_output.C
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_output.C' object='src/mesh/libmesh_prof_la-mesh_output.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_prof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_prof_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_prof_la-mesh_output.lo `test -f 'src/mesh/mesh_output.C' || echo '$(srcdir)/'`src/mesh/mesh_output.C
+
+src/mesh/libmesh_prof_la-mesh_qhull_interface.lo: src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_prof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_prof_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_prof_la-mesh_qhull_interface.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_qhull_interface.Tpo -c -o src/mesh/libmesh_prof_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_qhull_interface.Tpo src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_qhull_interface.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='src/mesh/mesh_qhull_interface.C' object='src/mesh/libmesh_prof_la-mesh_qhull_interface.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_prof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_prof_la_CXXFLAGS) $(CXXFLAGS) -c -o src/mesh/libmesh_prof_la-mesh_qhull_interface.lo `test -f 'src/mesh/mesh_qhull_interface.C' || echo '$(srcdir)/'`src/mesh/mesh_qhull_interface.C
 
 src/mesh/libmesh_prof_la-mesh_refinement.lo: src/mesh/mesh_refinement.C
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmesh_prof_la_CPPFLAGS) $(CPPFLAGS) $(libmesh_prof_la_CXXFLAGS) $(CXXFLAGS) -MT src/mesh/libmesh_prof_la-mesh_refinement.lo -MD -MP -MF src/mesh/$(DEPDIR)/libmesh_prof_la-mesh_refinement.Tpo -c -o src/mesh/libmesh_prof_la-mesh_refinement.lo `test -f 'src/mesh/mesh_refinement.C' || echo '$(srcdir)/'`src/mesh/mesh_refinement.C

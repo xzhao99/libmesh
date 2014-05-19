@@ -123,7 +123,7 @@ am__v_GEN_1 =
 AM_V_at = $(am__v_at_@AM_V@)
 am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
 am__v_at_0 = @
-am__v_at_1 = 
+am__v_at_1 =
 SOURCES =
 DIST_SOURCES =
 am__can_run_installinfo = \
@@ -472,7 +472,7 @@ BUILT_SOURCES = auto_ptr.h dirichlet_boundaries.h dof_map.h \
 	legacy_xdr_io.h matlab_io.h medit_io.h mesh.h mesh_base.h \
 	mesh_communication.h mesh_data.h mesh_function.h \
 	mesh_generation.h mesh_input.h mesh_inserter_iterator.h \
-	mesh_modification.h mesh_output.h mesh_refinement.h \
+	mesh_modification.h mesh_output.h mesh_qhull_interface.h mesh_refinement.h \
 	mesh_serializer.h mesh_smoother.h mesh_smoother_laplace.h \
 	mesh_smoother_vsmoother.h mesh_subdivision_support.h \
 	mesh_tetgen_interface.h mesh_tetgen_wrapper.h mesh_tools.h \
@@ -1265,6 +1265,9 @@ mesh_modification.h: $(top_srcdir)/include/mesh/mesh_modification.h
 	$(AM_V_GEN)rm -f $@ && $(LN_S) $< $@
 
 mesh_output.h: $(top_srcdir)/include/mesh/mesh_output.h
+	$(AM_V_GEN)rm -f $@ && $(LN_S) $< $@
+
+mesh_qhull_interface.h: $(top_srcdir)/include/mesh/mesh_qhull_interface.h
 	$(AM_V_GEN)rm -f $@ && $(LN_S) $< $@
 
 mesh_refinement.h: $(top_srcdir)/include/mesh/mesh_refinement.h
