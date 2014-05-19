@@ -174,6 +174,7 @@ include_HEADERS =  \
         mesh/mesh_inserter_iterator.h \
         mesh/mesh_modification.h \
         mesh/mesh_output.h \
+        mesh/mesh_qhull_interface.h \
         mesh/mesh_refinement.h \
         mesh/mesh_serializer.h \
         mesh/mesh_smoother.h \
