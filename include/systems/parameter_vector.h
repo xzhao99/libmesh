@@ -41,7 +41,7 @@ public:
   /**
    * Default constructor: "no parameters"
    */
-  ParameterVector() {}
+  ParameterVector() : _params(), _my_data() {}
 
   /**
    * Constructor-from-vector-of-Number*: each points to a parameter
