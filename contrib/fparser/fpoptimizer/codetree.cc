@@ -440,8 +440,7 @@ namespace FPoptimizer_CodeTree
     }
 }
 
-/* BEGIN_EXPLICIT_INSTANTATION */
-#include "instantiate.hh"
+# include "instantiate.hh"
 namespace FPoptimizer_CodeTree
 {
 #define FP_INSTANTIATE(type) \
@@ -449,8 +448,13 @@ namespace FPoptimizer_CodeTree
     template struct CodeTreeData<type>;
     FPOPTIMIZER_EXPLICITLY_INSTANTIATE(FP_INSTANTIATE)
 #undef FP_INSTANTIATE
+
+#ifdef FUNCTIONPARSER_SUPPORT_DEBUGGING
+#define FP_INSTANTIATE(type) \
+    template void DumpTreeWithIndent<type>(const CodeTree<type>&, std::ostream&, const std::string&);
+    FPOPTIMIZER_EXPLICITLY_INSTANTIATE(FP_INSTANTIATE)
+#undef FP_INSTANTIATE
+#endif
 }
-/* END_EXPLICIT_INSTANTATION */
 
 #endif
-
