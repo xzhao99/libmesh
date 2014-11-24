@@ -197,6 +197,13 @@ public:
    */
   void make_nodes_parallel_consistent (MeshBase &,
                                        LocationMap<Node> &);
+
+  /**
+   * This is a hack to test/debug HilbertIndices since the header
+   * files for that library are not currently installed by libMesh.
+   * This should definitely not be checked in!
+   */
+  void test_hilbert (MeshBase &);
 };
 
 

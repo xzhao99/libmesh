@@ -849,6 +849,79 @@ void MeshCommunication::find_global_indices (const Parallel::Communicator &,
 
 
 
+void MeshCommunication::test_hilbert (MeshBase & mesh)
+{
+  // Construct a BoundingBox for the Mesh
+  MeshTools::BoundingBox bbox = MeshTools::bounding_box(mesh);
+
+  // Create HilbertIndices for the Elem centroids...
+  std::vector<Hilbert::HilbertIndices> hilbert_keys;
+  std::vector<Point> centroids;
+  {
+    MeshBase::element_iterator       el     = mesh.elements_begin();
+    const MeshBase::element_iterator end_el = mesh.elements_end();
+
+    for (; el != end_el; ++el)
+      {
+        // Print out the Mesh centroids and create Hilbert keys from them
+        Point centroid = (*el)->centroid();
+        // libMesh::out << centroid << std::endl;
+        hilbert_keys.push_back(get_hilbert_index(centroid, bbox));
+        centroids.push_back(centroid);
+      }
+  }
+
+  // Short-cuts to bounding box coords
+  Real
+    xmin = bbox.first(0),
+    xmax = bbox.second(0),
+    ymin = bbox.first(1),
+    ymax = bbox.second(1),
+    zmin = bbox.first(2),
+    zmax = bbox.second(2);
+
+  // The entries in the output racks are integers in the
+  // range [0, Hilbert::inttype::max] which can be
+  // converted to floating point values in [0,1] and
+  // finally to actual values using the bounding box.
+  Real max_int_as_real = static_cast<Real>(std::numeric_limits<Hilbert::inttype>::max());
+
+  // Try to convert HilbertIndices back to (x,y,z) coordinates
+  for (unsigned i=0; i<hilbert_keys.size(); ++i)
+  {
+    // The input will be hilbert_keys[i].  For this we can use the
+    // operator= provided by the BitVecType class. BitVecType is a
+    // CBigBitVec!
+    Hilbert::BitVecType input;
+    input = hilbert_keys[i];
+
+    // Get output in a CBigBitVec
+    std::vector<CBigBitVec> output(3);
+
+    // Call the indexToCoords function
+    Hilbert::indexToCoords(&output[0], 8*sizeof(Hilbert::inttype), 3, input);
+
+    // Get the points in [0,1]^3.  The zeroth rack of each entry in
+    // 'output' maps to the normalized x, y, and z locations,
+    // respectively.
+    Point p_hat(static_cast<Real>(output[0].racks()[0]) / max_int_as_real,
+                static_cast<Real>(output[1].racks()[0]) / max_int_as_real,
+                static_cast<Real>(output[2].racks()[0]) / max_int_as_real);
+
+    // Convert the points from [0,1]^3 to their actual (x,y,z) locations
+    Point p(xmin + (xmax-xmin)*p_hat(0),
+            ymin + (ymax-ymin)*p_hat(1),
+            zmin + (zmax-zmin)*p_hat(2));
+
+    Real delta = (centroids[i] - p).size();
+
+    libMesh::out << "Original=" << centroids[i] << ", " << "Mapped=" << p << ", delta=" << delta << std::endl;
+  }
+
+}
+
+
+
 //------------------------------------------------------------------
 template void MeshCommunication::find_global_indices<MeshBase::const_node_iterator> (const Parallel::Communicator &,
                                                                                      const MeshTools::BoundingBox &,
