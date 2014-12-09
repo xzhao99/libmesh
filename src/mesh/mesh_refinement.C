@@ -714,16 +714,9 @@ bool MeshRefinement::coarsen_elements (const bool maintain_level_one)
   if (_maintain_level_one)
     libmesh_assert(test_level_one(true));
   libmesh_assert(this->make_coarsening_compatible(maintain_level_one));
-  // FIXME: This won't pass unless we add a redundant find_neighbors()
-  // call or replace find_neighbors() with on-the-fly neighbor updating
-  // libmesh_assert(!this->eliminate_unrefined_patches());
-
-  // We can't contract the mesh ourselves anymore - a System might
-  // need to restrict old coefficient vectors first
-  // _mesh.contract();
 
   // Finally, the new mesh may need to be prepared for use
-  if (mesh_changed)
+  if (mesh_changed && _prepare_after_mesh_changes)
     _mesh.prepare_for_use (/*skip_renumber =*/false);
 
   return mesh_changed;
@@ -841,12 +834,9 @@ bool MeshRefinement::refine_elements (const bool maintain_level_one)
   if (_maintain_level_one)
     libmesh_assert(test_level_one(true));
   libmesh_assert(this->make_refinement_compatible(maintain_level_one));
-  // FIXME: This won't pass unless we add a redundant find_neighbors()
-  // call or replace find_neighbors() with on-the-fly neighbor updating
-  // libmesh_assert(!this->eliminate_unrefined_patches());
 
-  // Finally, the new mesh needs to be prepared for use
-  if (mesh_changed)
+  // Finally, the new mesh may need to be prepared for use
+  if (mesh_changed && _prepare_after_mesh_changes)
     _mesh.prepare_for_use (/*skip_renumber =*/false);
 
   return mesh_changed;
