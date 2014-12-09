@@ -431,16 +431,10 @@ public:
   bool make_flags_parallel_consistent ();
 
   /**
-   * Returns the state of the _enforce_mismatch_limit_prior_to_refinement flag.
-   * Defaults to false.
-   * */
-  bool get_enforce_mismatch_limit_prior_to_refinement();
-
-  /**
-   * Set _enforce_mismatch_limit_prior_to_refinement option.
-   * Defaults to false.
-   * */
-  void set_enforce_mismatch_limit_prior_to_refinement(bool enforce);
+   * Get/set the _enforce_mismatch_limit_prior_to_refinement flag.
+   * The default value for this flag is false.
+   */
+  bool& enforce_mismatch_limit_prior_to_refinement();
 
 private:
 
@@ -835,14 +829,9 @@ inline unsigned char& MeshRefinement::node_level_mismatch_limit()
   return _node_level_mismatch_limit;
 }
 
-inline bool MeshRefinement::get_enforce_mismatch_limit_prior_to_refinement()
+inline bool& MeshRefinement::enforce_mismatch_limit_prior_to_refinement()
 {
   return _enforce_mismatch_limit_prior_to_refinement;
-}
-
-inline void MeshRefinement::set_enforce_mismatch_limit_prior_to_refinement(bool enforce)
-{
-  _enforce_mismatch_limit_prior_to_refinement = enforce;
 }
 
 } // namespace libMesh
