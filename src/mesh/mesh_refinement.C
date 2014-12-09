@@ -545,24 +545,6 @@ bool MeshRefinement::refine_and_coarsen_elements (const bool maintain_level_one)
   const bool coarsening_changed_mesh =
     this->_coarsen_elements ();
 
-  // FIXME: test_level_one now tests consistency across periodic
-  // boundaries, which requires a point_locator, which just got
-  // invalidated by _coarsen_elements() and hasn't yet been cleared by
-  // prepare_for_use().
-
-  //  if (_maintain_level_one)
-  //    libmesh_assert(test_level_one(true));
-  //  libmesh_assert(this->make_coarsening_compatible(maintain_level_one));
-  //  libmesh_assert(this->make_refinement_compatible(maintain_level_one));
-
-  // FIXME: This won't pass unless we add a redundant find_neighbors()
-  // call or replace find_neighbors() with on-the-fly neighbor updating
-  // libmesh_assert(!this->eliminate_unrefined_patches());
-
-  // We can't contract the mesh ourselves anymore - a System might
-  // need to restrict old coefficient vectors first
-  // _mesh.contract();
-
   // Now refine the flagged elements.  This will
   // take up some space, maybe more than what was freed.
   const bool refining_changed_mesh =
