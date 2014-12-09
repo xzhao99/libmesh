@@ -436,6 +436,26 @@ public:
    */
   bool& enforce_mismatch_limit_prior_to_refinement();
 
+  /**
+   * Flag value defaults to true.  In 99% of cases we want to call
+   * prepare_for_use() on the Mesh after any refinement/coarsening has
+   * occurred.  This is currently done in the following member
+   * functions:
+   * .) uniformly_refine()
+   * .) uniformly_coarsen()
+   * .) refine_and_coarsen_elements()
+   * .) refine_elements()
+   * .) coarsen_elements()
+   * There may be special situations where the Mesh is not quite ready
+   * to have prepare_for_use() called on it immediately after
+   * refinement/coarsening... Setting this flag to false prevents
+   * MeshRefinement from calling prepare_for_use() after the Mesh
+   * changes, but the user should be aware that the Mesh will *not*
+   * be in a valid state regarding neighbor and/or partitioning
+   * information until prepare_for_use() is called on the Mesh!
+   */
+  bool& prepare_after_mesh_changes();
+
 private:
 
   /**
@@ -750,6 +770,15 @@ private:
   bool _enforce_mismatch_limit_prior_to_refinement;
 
   /**
+   * Default true.  If false, the MeshRefinement object will not call
+   * prepare_for_use() after the mesh changes. It is then up to the
+   * user to make sure prepare_for_use() does get called, otherwise
+   * the newly changed Mesh will be in an invalid state.  See accessor
+   * documentation for more details.
+   */
+  bool _prepare_after_mesh_changes;
+
+  /**
    * This helper function enforces the desired mismatch limits prior
    * to refinement.  It is called from the
    * MeshRefinement::limit_level_mismatch_at_edge() and
@@ -832,6 +861,11 @@ inline unsigned char& MeshRefinement::node_level_mismatch_limit()
 inline bool& MeshRefinement::enforce_mismatch_limit_prior_to_refinement()
 {
   return _enforce_mismatch_limit_prior_to_refinement;
+}
+
+inline bool& MeshRefinement::prepare_after_mesh_changes()
+{
+  return _prepare_after_mesh_changes;
 }
 
 } // namespace libMesh
