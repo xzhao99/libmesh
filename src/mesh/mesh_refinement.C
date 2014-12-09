@@ -568,8 +568,25 @@ bool MeshRefinement::refine_and_coarsen_elements (const bool maintain_level_one)
   const bool refining_changed_mesh =
     this->_refine_elements();
 
-  // Finally, the new mesh needs to be prepared for use
-  if (coarsening_changed_mesh || refining_changed_mesh)
+  // If nothing changed, we can just assert a few things and return
+  // false.  (If nothing truly changed, it is probably redundant to
+  // assert this stuff, but hey, what are asserts for if not
+  // redundancy?)
+  if (!coarsening_changed_mesh && !refining_changed_mesh)
+    {
+      if (_maintain_level_one)
+        libmesh_assert(test_level_one(true));
+      libmesh_assert(test_unflagged(true));
+      libmesh_assert(this->make_coarsening_compatible(maintain_level_one));
+      libmesh_assert(this->make_refinement_compatible(maintain_level_one));
+
+      return false;
+    }
+
+  // Otherwise, either refinement or coarsening did change the mesh,
+  // so we will prepare the Mesh for use, but only if we are
+  // responsible for doing so.
+  if (_prepare_after_mesh_changes)
     {
 #ifdef DEBUG
       _mesh.libmesh_assert_valid_parallel_ids();
@@ -582,26 +599,9 @@ bool MeshRefinement::refine_and_coarsen_elements (const bool maintain_level_one)
       libmesh_assert(test_unflagged(true));
       libmesh_assert(this->make_coarsening_compatible(maintain_level_one));
       libmesh_assert(this->make_refinement_compatible(maintain_level_one));
-      // FIXME: This won't pass unless we add a redundant find_neighbors()
-      // call or replace find_neighbors() with on-the-fly neighbor updating
-      // libmesh_assert(!this->eliminate_unrefined_patches());
-
-      return true;
-    }
-  else
-    {
-      if (_maintain_level_one)
-        libmesh_assert(test_level_one(true));
-      libmesh_assert(test_unflagged(true));
-      libmesh_assert(this->make_coarsening_compatible(maintain_level_one));
-      libmesh_assert(this->make_refinement_compatible(maintain_level_one));
     }
 
-  // Otherwise there was no change in the mesh,
-  // let the user know.  Also, there is no need
-  // to prepare the mesh for use since it did not change.
-  return false;
-
+  return true;
 }
 
 
